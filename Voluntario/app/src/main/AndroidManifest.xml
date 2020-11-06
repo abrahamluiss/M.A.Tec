@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VadtVoluntary">
-
-        <activity android:name=".ComentariosActivity"></activity>
-        <activity android:name=".VerProblemasActivity" />
-
-        <activity android:name=".TecnologiaUsadaActivity"></activity>
+        <activity android:name=".InicialActivity"></activity>
+        <activity android:name=".MenuRutaActivity" />
+        <activity android:name=".RegistrarCursoActivity" />
+        <activity android:name=".TecnologiaUsadaActivity" />
         <activity android:name=".RutasAprendisajeActivity" />
         <activity android:name=".actividades.SplashActivity">
             <intent-filter>
@@ -23,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
