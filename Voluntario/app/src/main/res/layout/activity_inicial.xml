@@ -1,60 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/menuPrincipal"
+    android:id="@+id/menuRuta"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/secondaryDarkColor">
+    android:orientation="vertical"
+    tools:context=".InicialActivity"
+    android:background="@color/primaryColor">
 
-    <ImageView
-        android:id="@+id/invetarioInicio"
+    <TextView
+        android:id="@+id/txtInicial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="30dp"
-        android:src="@drawable/instrucciones" />
+        android:text="INICIAL"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        android:textColor="@color/whiteTextColor"
+        android:textStyle="bold"/>
 
-    <GridLayout
-        android:id="@+id/idGrid"
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/GridInicial"
         android:layout_width="match_parent"
-        android:layout_height="434dp"
-        android:layout_below="@+id/TextNickName"
-        android:layout_marginTop="65dp"
-        android:columnCount="2"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtInicial"
+        android:layout_marginTop="50dp"
         android:padding="4dp"
-        android:rowCount="3">
+        app:columnCount="2"
+        app:rowCount="3">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/carRegitrar"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
+            android:id="@+id/carVideoClase"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="8dp"
             android:elevation="6dp"
-            android:foreground="?selectableItemBackground"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="25dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
+                android:gravity="center_horizontal|center_vertical"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="164dp"
-                    android:layout_height="85dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/btn_ok_p" />
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/one" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Problemas de los Docentes"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:text="VIDEO CLASE"
                     android:textAlignment="center"
                     android:textColor="@color/secondaryColor"
                     android:textSize="18dp"
@@ -63,35 +67,33 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/carRuta"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginLeft="16dp"
+            android:id="@+id/carConexionAlum"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
             android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="8dp"
             android:elevation="6dp"
-            android:foreground="?selectableItemBackground"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="25dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
+                android:gravity="center_horizontal|center_vertical"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/start" />
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/two" />
 
                 <TextView
-                    android:layout_width="177dp"
-                    android:layout_height="34dp"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Registrar Curso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:text="Conexion con Alumnos"
                     android:textAlignment="center"
                     android:textColor="@color/secondaryColor"
                     android:textSize="18dp"
@@ -100,48 +102,44 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/carValoracion"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginLeft="16dp"
+            android:id="@+id/carCreacion"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
             android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="8dp"
             android:elevation="6dp"
-            android:foreground="?selectableItemBackground"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="25dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="119dp"
-                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="78dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/informacion" />
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/two" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Ver Valoracion"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:text="Conexion con Alumnos"
                     android:textAlignment="center"
                     android:textColor="@color/secondaryColor"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/carTecnologia"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="10dp"
@@ -175,10 +173,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/carVoluntarios"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="10dp"
@@ -210,18 +206,43 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-    </GridLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/carVoluntarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="6dp"
+            android:foreground="?selectableItemBackground"
+            app:cardCornerRadius="8dp">
 
-    <TextView
-        android:id="@+id/TextNickName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/invetarioInicio"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:text="VAAD Technology"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="161dp"
+                    android:layout_height="87dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/instrucciones" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Crear Ruta de Aprendisaje"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
 </RelativeLayout>

@@ -4,54 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryDarkColor"
-    tools:context=".TecnologiaUsadaActivity">
+    tools:context=".MenuRutaActivity"
+    android:background="@color/primaryDarkColor">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Registrar Herramientas"
+        android:layout_marginTop="32dp"
+        android:text="Ruta de Cursos "
         android:textAlignment="center"
         android:textColor="@color/whiteTextColor"
         android:textSize="50dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.709"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="510dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="40dp"
-        android:text="Las Herramientas más usadas por los profesores a la hora de dicatar clases virtuales"
-        android:textAlignment="center"
-        android:textColor="@color/whiteTextColor"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
     <Button
-        android:id="@+id/btnVideo"
+        android:id="@+id/btnInicial"
         android:layout_width="250dp"
         android:layout_height="80dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="92dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/custom_botton"
-        android:text="CHAT Y VIDEO"
+        android:text="INICIAL"
         android:textAllCaps="false"
         android:textColor="@color/whiteTextColor"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -65,16 +50,16 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/custom_botton"
-        android:text="JUEGOS"
+        android:text="PRIMARIA"
         android:textAllCaps="false"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnVideo" />
+        app:layout_constraintTop_toTopOf="@+id/btnInicial" />
 
     <Button
-        android:id="@+id/btnExamen"
+        android:id="@+id/btnSecund"
         android:layout_width="250dp"
         android:layout_height="80dp"
         android:layout_marginStart="8dp"
@@ -83,7 +68,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/custom_botton"
-        android:text="EXÁMENES"
+        android:text="SECUNDARIA"
         android:textAllCaps="false"
         android:textSize="18dp"
         android:textStyle="bold"
@@ -92,7 +77,7 @@
         app:layout_constraintTop_toTopOf="@+id/btnJuegos" />
 
     <Button
-        android:id="@+id/btnOtros"
+        android:id="@+id/btnSuperior"
         android:layout_width="250dp"
         android:layout_height="80dp"
         android:layout_marginStart="8dp"
@@ -101,12 +86,12 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/custom_botton"
-        android:text="OTROS"
+        android:text="SUPERIOR"
         android:textAllCaps="false"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnExamen" />
+        app:layout_constraintTop_toTopOf="@+id/btnSecund" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

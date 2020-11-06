@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VadtVoluntary">
-        <activity android:name=".TecnologiaUsadaActivity"></activity>
+        <activity android:name=".InicialActivity"></activity>
+        <activity android:name=".MenuRutaActivity" />
+        <activity android:name=".RegistrarCursoActivity" />
+        <activity android:name=".TecnologiaUsadaActivity" />
         <activity android:name=".RutasAprendisajeActivity" />
         <activity android:name=".actividades.SplashActivity">
             <intent-filter>
