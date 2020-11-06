@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "539292166698",
+    "firebase_url": "https://vadt-448fa.firebaseio.com",
+    "project_id": "vadt-448fa",
+    "storage_bucket": "vadt-448fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539292166698:android:d7a83b0adef69cba92f153",
+        "android_client_info": {
+          "package_name": "edu.pe.continental.vadt.voluntary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539292166698-vcc8m1svvbgkp1a23opgcjhbadeon12g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.pe.continental.vadt.voluntary",
+            "certificate_hash": "f93569275f5b32a05959f168c9090b343a106a4e"
+          }
+        },
+        {
+          "client_id": "539292166698-ai3joc40bbr6s5ugsoo8gsbkg69671bj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZM5tAxCzOJdvby2OjbGNoFnV7M_JG-m8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539292166698-ai3joc40bbr6s5ugsoo8gsbkg69671bj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
