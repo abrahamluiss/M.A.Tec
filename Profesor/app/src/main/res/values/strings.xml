@@ -5,4 +5,10 @@
     <string name="login">Login</string>
     <string name="registrarme">Registrarme</string>
     <string name="inicia_sesion">Inicia Sesión</string>
+    <string name="registrate">Registrate</string>
+    <string name="si_ya_tienes_cuenta">Ya tienes cuenta?</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="confirmar_contrasena">Confirmar Contraseña</string>
+    <string name="enviar">Enviar</string>
 </resources>
