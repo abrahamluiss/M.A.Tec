@@ -5,4 +5,17 @@
     <string name="login">Login</string>
     <string name="registrarme">Registrarme</string>
     <string name="inicia_sesion">Inicia Sesión</string>
+    <string name="registrate">Registrate</string>
+    <string name="si_ya_tienes_cuenta">Ya tienes cuenta?</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="confirmar_contrasena">Confirmar Contraseña</string>
+    <string name="enviar">Enviar</string>
+    <string name="vadt_teacher">VADT TEACHER</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registrate_aqui">REGISTRATE AQUI</string>
+    <string name="titulo_del_articulo">Titulo del articulo</string>
+    <string name="descripcion_del_articulo">Descripcion del articulo</string>
+    <string name="transtionname_picture">transitionnamepicture</string>
+
 </resources>

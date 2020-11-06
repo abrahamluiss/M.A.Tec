@@ -1,8 +1,10 @@
-package edu.pe.continental.vadt.teacher;
+package edu.pe.continental.vadt.teacher.actividades;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import edu.pe.continental.vadt.teacher.R;
 
 public class ValoracionActivity extends AppCompatActivity {
 

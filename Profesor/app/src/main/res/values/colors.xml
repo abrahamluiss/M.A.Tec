@@ -10,4 +10,7 @@
     <color name="secondaryTextColor">#000000</color>
     <color name="whiteTextColor">#FFFFFFFF</color>
 
+    <color name="colorLogoBlack">#242122</color>
+
+
 </resources>

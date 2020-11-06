@@ -12,11 +12,13 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="VADT"
+        android:textColor="@color/whiteTextColor"
         android:textSize="100sp"
         android:textStyle="bold"
-        android:textColor="@color/whiteTextColor"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.488"
+        tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
         android:id="@+id/imageView"

@@ -1,14 +1,14 @@
-package edu.pe.continental.vadt.teacher;
+package edu.pe.continental.vadt.voluntary;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class CursosRapidosActivity extends AppCompatActivity {
+public class MenuRutaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cursos_rapidos);
+        setContentView(R.layout.activity_menu_ruta);
     }
 }

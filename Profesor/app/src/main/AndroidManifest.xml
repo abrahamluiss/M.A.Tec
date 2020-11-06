@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.pe.continental.vadt.teacher">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,11 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VadtTeacher">
-        <activity android:name=".CursosRapidosActivity"></activity>
-        <activity android:name=".ValoracionActivity" />
-        <activity android:name=".RegistroActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".actividades.CursosRapidosActivity"></activity>
+        <activity android:name=".actividades.ValoracionActivity" />
+=======
+        <activity android:name=".actividades.PostActivity"></activity>
+        <activity android:name=".actividades.PostDetailActivity" />
+        <activity android:name=".actividades.CentroProblemasActivity" />
+        <activity android:name=".actividades.HomeActivity" />
+        <activity android:name=".actividades.RegistroActivity" />
+        <activity android:name=".actividades.LoginActivity" />
+        <activity android:name=".actividades.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

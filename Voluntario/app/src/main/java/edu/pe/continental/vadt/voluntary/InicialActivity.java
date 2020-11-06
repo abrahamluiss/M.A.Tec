@@ -1,14 +1,14 @@
-package edu.pe.continental.vadt.teacher;
+package edu.pe.continental.vadt.voluntary;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class LoginActivity extends AppCompatActivity {
+public class InicialActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_inicial);
     }
 }
