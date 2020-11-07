@@ -16,7 +16,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:elevation="14dp"
+            android:elevation="36dp"
             >
 
             <View
@@ -33,12 +33,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="VADT VOLUNTARIO"
+                android:text="M.A.Tec VOLUNTARIO"
                 android:layout_gravity="center"
                 android:textAlignment="center"
                 android:textColor="@color/whiteTextColor"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:textSize="36dp"
                 android:layout_marginTop="10dp"/>
 
         </FrameLayout>
@@ -182,10 +182,10 @@
             android:id="@+id/textViewRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Registrate"
+            android:text="REGISTRATE AQUI"
             android:layout_marginLeft="5dp"
             android:textSize="15sp"
-            android:textColor="@color/primaryColor"
+            android:textColor="@color/primaryDarkColor"
             android:textStyle="bold"
             />
 
