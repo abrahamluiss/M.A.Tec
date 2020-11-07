@@ -41,6 +41,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="8dp"
             android:elevation="6dp"
+            android:onClick="onClick"
             app:cardCornerRadius="25dp"
             app:layout_column="0"
             app:layout_row="0">
