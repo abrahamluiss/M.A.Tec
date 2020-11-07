@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:fitsSystemWindows="true"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradiente"
     tools:context=".actividades.ComentariosActivity">
 
     <LinearLayout
@@ -15,8 +16,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:text="Comentarios"
+            android:layout_margin="30sp"
+            android:text="Comentarios de docentes"
+            android:textColor="@color/whiteTextColor"
             android:gravity="center"
             android:textSize="35sp"
             />
@@ -40,6 +42,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Julio Perez"
+                        android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textSize="25sp"/>
                     <RatingBar
@@ -61,6 +64,8 @@
                         android:layout_height="match_parent"
                         android:text="Fue una buena experiencia me gusto"
                         android:textSize="25sp"
+                        android:textColor="@color/whiteTextColor"
+                        android:background="@color/primaryDarkColor"
                         android:gravity="center"/>
 
                 </LinearLayout>
@@ -86,6 +91,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Almendro Cruz"
+                        android:textStyle="bold"
+
                         android:layout_gravity="center"
                         android:textSize="25sp"/>
                     <RatingBar
@@ -107,6 +114,8 @@
                         android:layout_height="match_parent"
                         android:text="Fue una buena experiencia me gusto"
                         android:textSize="25sp"
+                        android:textColor="@color/whiteTextColor"
+                        android:background="@color/primaryDarkColor"
                         android:gravity="center"/>
 
                 </LinearLayout>
@@ -133,6 +142,8 @@
                         android:layout_height="wrap_content"
                         android:text="Maria Paz"
                         android:layout_gravity="center"
+                        android:textStyle="bold"
+
                         android:textSize="25sp"/>
                     <RatingBar
                         android:layout_width="wrap_content"
@@ -152,6 +163,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Fue una buena experiencia me gusto"
+                        android:textColor="@color/whiteTextColor"
+                        android:background="@color/primaryDarkColor"
                         android:textSize="25sp"
                         android:gravity="center"/>
 

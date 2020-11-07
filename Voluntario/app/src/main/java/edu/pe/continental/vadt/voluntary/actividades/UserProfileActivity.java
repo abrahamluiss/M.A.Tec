@@ -118,14 +118,14 @@ public class UserProfileActivity extends AppCompatActivity {
         intent.putExtra("idUser2", mExtraIdUser);
         startActivity(intent);
         */
-        String urlWsp = "https://api.whatsapp.com/send?phone="+returPhone+"&text=Hola%20"+returName+"%20soy%20voluntario%20del%20grupo%20ASEZ%20puedo%20ayudarte%20con%20algo%3F";
+        String urlWsp = "https://api.whatsapp.com/send?phone=+51"+returPhone+"&text=Hola%20"+returName+"%20soy%20voluntario%20del%20grupo%20ASEZ%20puedo%20ayudarte%20con%20algo%3F";
         //https://api.whatsapp.com/send?phone=51955446977&text=Hola%20
         //https://api.whatsapp.com/send?phone=51955446977&text=Hola%20juan%20vi%20que%20tenias%20ayuda%20%3F.
         Uri uri = Uri.parse(urlWsp);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
 
-        Toast.makeText(this, urlWsp, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, urlWsp, Toast.LENGTH_SHORT).show();
     }
 
     @Override

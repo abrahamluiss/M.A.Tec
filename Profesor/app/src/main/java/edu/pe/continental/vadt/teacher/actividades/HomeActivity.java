@@ -13,6 +13,7 @@ import edu.pe.continental.vadt.teacher.R;
 public class HomeActivity extends AppCompatActivity {
 
     CardView mCarRegistrar, mCarRuta,mCarValoracion,mCarCursos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
