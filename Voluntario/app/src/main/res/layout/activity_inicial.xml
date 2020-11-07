@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".InicialActivity"
+    tools:context=".actividades.InicialActivity"
     android:background="@color/primaryColor">
 
     <TextView

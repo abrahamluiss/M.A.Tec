@@ -39,18 +39,20 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import edu.pe.continental.vadt.teacher.R;
+import edu.pe.continental.vadt.teacher.adapters.CommentAdapter;
+import edu.pe.continental.vadt.teacher.models.Comment;
+import edu.pe.continental.vadt.teacher.providers.CommentsProvider;
 import edu.pe.continental.vadt.teacher.adapters.SliderAdapter;
 import edu.pe.continental.vadt.teacher.models.SliderItem;
 import edu.pe.continental.vadt.teacher.providers.AuthProvider;
 import edu.pe.continental.vadt.teacher.providers.LikesProvider;
 import edu.pe.continental.vadt.teacher.providers.PostProvider;
 import edu.pe.continental.vadt.teacher.providers.UsersProvider;
+import edu.pe.continental.vadt.teacher.utils.RelativeTime;
 import edu.pe.continental.vadt.teacher.utils.ViewedMessageHelper;
 
 public class PostDetailActivity extends AppCompatActivity {
@@ -61,13 +63,13 @@ public class PostDetailActivity extends AppCompatActivity {
 
     PostProvider mPostProvider;
     UsersProvider mUsersProvider;
-    //CommentsProvider mCommentsProvider;
+    CommentsProvider mCommentsProvider;
     AuthProvider mAuthProvider;
     LikesProvider mLikesProvider;
     //NotificationProvider mNotificationProvider;
     //TokenProvider mTokenProvider;
 
-    //CommentAdapter mAdapter;
+    CommentAdapter mAdapter;
 
     String mExtraPostId;
 
@@ -81,7 +83,7 @@ public class PostDetailActivity extends AppCompatActivity {
     ImageView mImageViewCategory;
     CircleImageView mCircleImageViewProfile;
     Button mButtonShowProfile;
-    FloatingActionButton mFabComment;
+    //FloatingActionButton mFabComment;
     RecyclerView mRecyclerView;
     Toolbar mToolbar;
 
@@ -100,11 +102,14 @@ public class PostDetailActivity extends AppCompatActivity {
         mTextViewDescription = findViewById(R.id.textViewDescription);
         mTextViewUsername = findViewById(R.id.textViewUsername);
         mTextViewPhone = findViewById(R.id.textViewPhone);
+        //mTextViewNameCategory = findViewById(R.id.textViewNameCategory);
         mTextViewRelativeTime = findViewById(R.id.textViewRelativeTime);
         mTextViewLikes = findViewById(R.id.textViewLikes);
+        //mImageViewCategory = findViewById(R.id.imageViewCategory);
         mCircleImageViewProfile = findViewById(R.id.circleImageProfile);
-
-
+        //mButtonShowProfile = findViewById(R.id.btnShowProfile);
+        //mFabComment = findViewById(R.id.fabComment);
+        mRecyclerView = findViewById(R.id.recyclerViewComments);
         mToolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(mToolbar);
@@ -112,25 +117,37 @@ public class PostDetailActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(PostDetailActivity.this);
-//        mRecyclerView.setLayoutManager(linearLayoutManager);
+        mRecyclerView.setLayoutManager(linearLayoutManager);
 
         mPostProvider = new PostProvider();
         mUsersProvider = new UsersProvider();
-        //mCommentsProvider = new CommentsProvider();
+        mCommentsProvider = new CommentsProvider();
         mAuthProvider = new AuthProvider();
         mLikesProvider = new LikesProvider();
         //mNotificationProvider = new NotificationProvider();
         //mTokenProvider = new TokenProvider();
 
         mExtraPostId = getIntent().getStringExtra("id");
-
-
-
-
-
+/*
+        mFabComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialogComment();
+            }
+        });
+*/
+        /*
+        mButtonShowProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToShowProfile();
+            }
+        });
+*/
         getPost();
         getNumberLikes();
     }
+
 
     private void getNumberLikes() {
         mListener = mLikesProvider.getLikesByPost(mExtraPostId).addSnapshotListener(new EventListener<QuerySnapshot>() {
@@ -154,7 +171,7 @@ public class PostDetailActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-/*
+
         Query query = mCommentsProvider.getCommentsByPost(mExtraPostId);
         FirestoreRecyclerOptions<Comment> options =
                 new FirestoreRecyclerOptions.Builder<Comment>()
@@ -163,15 +180,13 @@ public class PostDetailActivity extends AppCompatActivity {
         mAdapter = new CommentAdapter(options, PostDetailActivity.this);
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.startListening();
-        */
-
         ViewedMessageHelper.updateOnline(true, PostDetailActivity.this);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-       // mAdapter.stopListening();
+        mAdapter.stopListening();
     }
 
     @Override
@@ -218,8 +233,7 @@ public class PostDetailActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 String value = editText.getText().toString();
                 if (!value.isEmpty()) {
-                    //createComment(value);
-                    Toast.makeText(PostDetailActivity.this, "No puedes ingresar el comendario", Toast.LENGTH_SHORT).show();
+                    createComment(value);
                 }
                 else {
                     Toast.makeText(PostDetailActivity.this, "Debe ingresar el comentario", Toast.LENGTH_SHORT).show();
@@ -237,13 +251,85 @@ public class PostDetailActivity extends AppCompatActivity {
         alert.show();
     }
 
+    private void createComment(final String value) {
+        Comment comment = new Comment();
+        comment.setComment(value);
+        comment.setIdPost(mExtraPostId);
+        comment.setIdUser(mAuthProvider.getUid());
+        comment.setTimestamp(new Date().getTime());
+        mCommentsProvider.create(comment).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    sendNotification(value);
+                    Toast.makeText(PostDetailActivity.this, "El comentario se creo correctamente", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(PostDetailActivity.this, "No se pudo crear el comentario", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
 
+    private void sendNotification(final String comment) {
+        if (mIdUser == null) {
+            return;
+        }
+        /*
+        mTokenProvider.getToken(mIdUser).addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if (documentSnapshot.exists()) {
+                    if (documentSnapshot.contains("token")) {
+                        String token = documentSnapshot.getString("token");
+                        Map<String, String> data = new HashMap<>();
+                        data.put("title", "NUEVO COMENTARIO");
+                        data.put("body", comment);
+                        FCMBody body = new FCMBody(token, "high", "4500s", data);
+                        mNotificationProvider.sendNotification(body).enqueue(new Callback<FCMResponse>() {
+                            @Override
+                            public void onResponse(Call<FCMResponse> call, Response<FCMResponse> response) {
+                                if (response.body() != null) {
+                                    if (response.body().getSuccess() == 1) {
+                                        Toast.makeText(PostDetailActivity.this, "La notificacion se envio correcatemente", Toast.LENGTH_SHORT).show();
+                                    }
+                                    else {
+                                        Toast.makeText(PostDetailActivity.this, "La notificacion no se pudo enviar", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                else {
+                                    Toast.makeText(PostDetailActivity.this, "La notificacion no se pudo enviar", Toast.LENGTH_SHORT).show();
+                                }
+                            }
 
+                            @Override
+                            public void onFailure(Call<FCMResponse> call, Throwable t) {
 
+                            }
+                        });
+                    }
+                }
+                else {
+                    Toast.makeText(PostDetailActivity.this, "El token de notificaciones del usuario no existe", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        */
+    }
 
+    private void goToShowProfile() {
+        if (!mIdUser.equals("")) {
+            //Intent intent = new Intent(PostDetailActivity.this, UserProfileActivity.class);
+            //intent.putExtra("idUser", mIdUser);
+            Toast.makeText(this, "perfil de user elegido", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(this, "El id del usuario aun no se carga", Toast.LENGTH_SHORT).show();
+        }
+    }
 
     private void instanceSlider() {
-        mSliderAdapter = new SliderAdapter(PostDetailActivity.this, mSliderItems);
+        mSliderAdapter = new edu.pe.continental.vadt.teacher.adapters.SliderAdapter(PostDetailActivity.this, mSliderItems);
         mSliderView.setSliderAdapter(mSliderAdapter);
         mSliderView.setIndicatorAnimation(IndicatorAnimations.THIN_WORM);
         mSliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
@@ -288,8 +374,8 @@ public class PostDetailActivity extends AppCompatActivity {
                     }
                     if (documentSnapshot.contains("timestamp")) {
                         long timestamp = documentSnapshot.getLong("timestamp");
-                        //String relativeTime = RelativeTime.getTimeAgo(timestamp, PostDetailActivity.this);
-                        //mTextViewRelativeTime.setText(relativeTime);
+                        String relativeTime = RelativeTime.getTimeAgo(timestamp, PostDetailActivity.this);
+                        mTextViewRelativeTime.setText(relativeTime);
                     }
 
                     instanceSlider();

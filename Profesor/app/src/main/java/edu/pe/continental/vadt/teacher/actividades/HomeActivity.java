@@ -23,7 +23,7 @@ public class HomeActivity extends AppCompatActivity {
         mCarRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(HomeActivity.this, "intent registrar", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(HomeActivity.this, "intent registrar", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(HomeActivity.this, CentroProblemasActivity.class);
                 //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);

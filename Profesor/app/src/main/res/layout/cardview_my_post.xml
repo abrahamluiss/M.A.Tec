@@ -41,7 +41,7 @@
                 android:id="@+id/textViewRelativeTimeMyPost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hace 0 min"
+
                 android:maxLines="1"
                 android:textSize="14dp"
                 android:layout_marginTop="3dp"/>

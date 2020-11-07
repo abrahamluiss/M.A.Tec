@@ -1,20 +1,31 @@
 package edu.pe.continental.vadt.teacher.models;
 
 public class User {
+
     private String id;
     private String email;
-    private String phone;
     private String username;
+    private String phone;
+    private String imageProfile;
+    private String imageCover;
+    private long timestamp;
+    private long lastConnection;
+    private boolean online;
 
     public User() {
 
     }
 
-    public User(String id, String email, String phone, String username) {
+    public User(String id, String email, String username, String phone, String imageProfile, String imageCover, long timestamp, long lastConnection, boolean online) {
         this.id = id;
         this.email = email;
-        this.phone = phone;
         this.username = username;
+        this.phone = phone;
+        this.imageProfile = imageProfile;
+        this.imageCover = imageCover;
+        this.timestamp = timestamp;
+        this.lastConnection = lastConnection;
+        this.online = online;
     }
 
     public String getId() {
@@ -33,6 +44,14 @@ public class User {
         this.email = email;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -41,11 +60,43 @@ public class User {
         this.phone = phone;
     }
 
-    public String getUsername() {
-        return username;
+    public long getTimestamp() {
+        return timestamp;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public String getImageProfile() {
+        return imageProfile;
+    }
+
+    public void setImageProfile(String imageProfile) {
+        this.imageProfile = imageProfile;
+    }
+
+    public String getImageCover() {
+        return imageCover;
+    }
+
+    public void setImageCover(String imageCover) {
+        this.imageCover = imageCover;
+    }
+
+    public long getLastConnection() {
+        return lastConnection;
+    }
+
+    public void setLastConnection(long lastConnection) {
+        this.lastConnection = lastConnection;
+    }
+
+    public boolean isOnline() {
+        return online;
+    }
+
+    public void setOnline(boolean online) {
+        this.online = online;
     }
 }

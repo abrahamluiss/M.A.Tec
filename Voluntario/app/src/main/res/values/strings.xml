@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Vadt voluntary</string>
+    <string name="inicia_sesion">Inicia Sesión</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="transtionname_picture">transitionnamepicture</string>
+
 </resources>

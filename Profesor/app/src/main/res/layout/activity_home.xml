@@ -255,7 +255,7 @@
         android:layout_below="@+id/invetarioInicio"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:text="VAAD Technology"
+        android:text="VAAD DOCENTE"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="30sp"
