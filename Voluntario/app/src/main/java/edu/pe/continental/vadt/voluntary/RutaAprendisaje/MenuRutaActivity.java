@@ -1,8 +1,10 @@
-package edu.pe.continental.vadt.voluntary;
+package edu.pe.continental.vadt.voluntary.RutaAprendisaje;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import edu.pe.continental.vadt.voluntary.R;
 
 public class MenuRutaActivity extends AppCompatActivity {
 

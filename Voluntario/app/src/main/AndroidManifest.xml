@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VadtVoluntary">
-        <activity android:name=".InicialActivity"></activity>
-        <activity android:name=".MenuRutaActivity" />
+        <activity android:name=".RutaAprendisaje.VideoActivity"></activity>
+        <activity android:name=".RutaAprendisaje.SuperiActivity" />
+        <activity android:name=".RutaAprendisaje.PrimariActivity" />
+        <activity android:name=".RutaAprendisaje.SecundariActivity" />
+        <activity android:name=".RutaAprendisaje.InicialActivity" />
+        <activity android:name=".RutaAprendisaje.MenuRutaActivity" />
         <activity android:name=".RegistrarCursoActivity" />
         <activity android:name=".TecnologiaUsadaActivity" />
-        <activity android:name=".RutasAprendisajeActivity" />
         <activity android:name=".actividades.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
