@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actividades.ConocenosActivity"
+
+    android:background="@drawable/backgroundgradiente">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="Grupo Asez"
+            android:textColor="@color/whiteTextColor"
+            android:gravity="center"
+            android:textSize="35sp"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="150sp"
+            android:layout_gravity="center"
+            android:src="@drawable/asez"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Es un grupo de voluntarios formado por universitarios de la Iglesia de Dios de todo el mundo para dar esperanza
+            y ayuda a los que tienen dificultades, con el amor de Dios Padre y Dios Madre."
+            android:textSize="25sp"
+            android:textColor="@color/whiteTextColor"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="15sp"
+                    android:text="S"
+                    android:gravity="center"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="30sp"
+                    android:background="@drawable/rounded_textview"/>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="15sp"
+                    android:text="A"
+                    android:gravity="center"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="30sp"
+                    android:background="@drawable/rounded_textview"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="15sp"
+                    android:text="V"
+                    android:gravity="center"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="30sp"
+                    android:background="@drawable/rounded_textview"/>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="15sp"
+                    android:text="E"
+                    android:gravity="center"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="30sp"
+                    android:background="@drawable/rounded_textview"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
