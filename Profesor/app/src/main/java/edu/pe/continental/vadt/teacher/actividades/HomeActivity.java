@@ -12,7 +12,7 @@ import edu.pe.continental.vadt.teacher.R;
 
 public class HomeActivity extends AppCompatActivity {
 
-    CardView mCarRegistrar, mCarRuta,mCarValoracion,mCarCursos;
+    CardView mCarRegistrar, mCarRuta,mCarValoracion,mCarCursos,mCarHerra,mCarConoce;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,16 @@ public class HomeActivity extends AppCompatActivity {
         mCarRuta=findViewById(R.id.carRuta);
         mCarValoracion=findViewById(R.id.carValoracion);
         mCarCursos=findViewById(R.id.carCursosRap);
+        mCarHerra=findViewById(R.id.carTecnologia);
+        mCarConoce=findViewById(R.id.carVoluntarios);
 
+        mCarConoce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ConocenosActivity.class);
+                startActivity(intent);
+            }
+        });
         mCarRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,6 +44,16 @@ public class HomeActivity extends AppCompatActivity {
         mCarRuta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, RutaAprendizajeActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        mCarHerra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, HerramientasActivity.class);
+                startActivity(intent);
 
             }
         });
