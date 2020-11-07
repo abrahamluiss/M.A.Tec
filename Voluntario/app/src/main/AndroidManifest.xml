@@ -24,6 +24,7 @@
         <activity android:name=".actividades.RegistrarCursoActivity" />
         <activity android:name=".actividades.TecnologiaUsadaActivity" />
         <activity android:name=".actividades.RutasAprendisajeActivity" />
+        <activity android:name=".actividades.ComentariosActivity" />
 
         <activity android:name=".RutaAprendisaje.VideoActivity"></activity>
         <activity android:name=".RutaAprendisaje.SuperiActivity" />
@@ -31,8 +32,8 @@
         <activity android:name=".RutaAprendisaje.SecundariActivity" />
         <activity android:name=".RutaAprendisaje.InicialActivity" />
         <activity android:name=".RutaAprendisaje.MenuRutaActivity" />
-        <activity android:name=".RegistrarCursoActivity" />
-        <activity android:name=".TecnologiaUsadaActivity" />
+
+
 
         <activity android:name=".actividades.SplashActivity">
             <intent-filter>
