@@ -96,6 +96,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/correo_electronico"
+                        android:textColor="@color/whiteTextColor"
                         android:background="#00000000"
                         android:inputType="textEmailAddress" />
 
@@ -132,6 +133,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/contrasena"
                         android:background="#00000000"
+                        android:textColor="@color/whiteTextColor"
                         android:inputType="textPassword" />
 
                 </com.google.android.material.textfield.TextInputLayout>
