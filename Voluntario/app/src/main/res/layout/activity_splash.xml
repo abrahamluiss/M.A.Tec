@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".actividades.SplashActivity"
-    android:background="@color/secondaryColor">
+    android:background="@drawable/backgroundgradiente">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="VADT"
+        android:text="M.A.Tec"
         android:textColor="@color/whiteTextColor"
         android:textSize="100sp"
         android:textStyle="bold"
