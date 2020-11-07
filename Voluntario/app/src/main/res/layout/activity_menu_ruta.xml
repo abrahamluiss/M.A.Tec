@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".actividades.MenuRutaActivity"
+=======
+    tools:context=".RutaAprendisaje.MenuRutaActivity"
+>>>>>>> 01b97389df3075a77c7a929d18ab3fa603ae2dd3
     android:background="@color/primaryDarkColor">
 
     <TextView

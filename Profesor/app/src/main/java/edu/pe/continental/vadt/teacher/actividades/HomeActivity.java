@@ -12,13 +12,15 @@ import edu.pe.continental.vadt.teacher.R;
 
 public class HomeActivity extends AppCompatActivity {
 
-    CardView mCarRegistrar, mCarRuta;
+    CardView mCarRegistrar, mCarRuta,mCarValoracion,mCarCursos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         mCarRegistrar = findViewById(R.id.carRegitrar);
         mCarRuta=findViewById(R.id.carRuta);
+        mCarValoracion=findViewById(R.id.carValoracion);
+        mCarCursos=findViewById(R.id.carCursosRap);
 
         mCarRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +35,20 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+            }
+        });
+        mCarValoracion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, ValoracionActivity.class);
+                startActivity(intent);
+            }
+        });
+        mCarCursos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, CursosRapidosActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -2,18 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/menuInicial"
+    android:id="@+id/menuSecundaria"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    tools:context=".RutaAprendisaje.InicialActivity"
     android:background="@color/primaryColor">
 
     <TextView
-        android:id="@+id/txtInicial"
+        android:id="@+id/txtSecundari"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="INICIAL"
+        android:text="SECUNDARIA"
         android:textSize="35dp"
         android:textAlignment="center"
         android:textColor="@color/whiteTextColor"
@@ -21,13 +22,13 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/GridInicial"
-        android:layout_width="355dp"
-        android:layout_height="399dp"
+        android:layout_width="wrap_content"
+        android:layout_height="637dp"
         android:layout_below="@+id/txtInicial"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="27dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="29dp"
         android:padding="4dp"
         app:columnCount="2"
@@ -53,7 +54,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/one" />
@@ -88,7 +89,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/two" />
@@ -124,7 +125,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/three" />
@@ -159,7 +160,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/four" />
@@ -194,7 +195,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/five" />
@@ -229,7 +230,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/six" />
@@ -240,6 +241,77 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_marginTop="5dp"
                     android:text="Aplicacion para Aprender"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondaryColor"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/carApliExamen"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="6dp"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/seven" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:text="Aplicacion Para Examenes"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondaryColor"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/carManejo"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="6dp"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/eight" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:text="Manejo del Drive y Programas OnLine"
                     android:textAlignment="center"
                     android:textColor="@color/secondaryColor"
                     android:textSize="18dp"
